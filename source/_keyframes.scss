@@ -1,0 +1,72 @@
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    75%{
+        transform: rotate(-15deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+@keyframes changeColor{
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@keyframes move{
+    0%{
+        color: hotpink;
+        transform: rotate(-90deg);
+    }
+    25%{
+        color: indigo;
+        transform: rotate(90deg);
+    }
+    50%{
+        color: khaki;
+        transform: rotate(-200deg);
+    }
+    75%{
+        color: yellowgreen;
+        transform: rotate(180deg);
+    }
+    100%{
+        color: white;
+        transform: rotate(-270deg);
+    }
+}
+@keyframes move2 {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+@keyframes move3{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width: 50%;
+    }
+    100%{
+        width: 95%;
+    }
+}

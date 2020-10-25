@@ -1,0 +1,185 @@
+.header{
+    background-color: $bgc__header;
+    padding: 10px 0px;
+    position: fixed;
+    max-height: 70px;
+    left: 0px;
+    right: 0px;
+    z-index: 1000;
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo{
+        display: flex;
+    }
+    &__img{
+        width: 100px;
+        max-height: 30px;
+        &:hover{
+            cursor: pointer;
+            text-shadow: 10px 10px 10px white;
+            animation: 1s linear 0s normal none infinite running rot;
+        }
+    }
+    &__label{
+        color: white;
+        position: relative;
+        cursor: pointer;
+        &::before{
+            content: '';
+            background-color: rgba(255, 255, 255, 0.856);
+            position: absolute;
+            width: 55px;
+            height: 100%;
+            box-shadow: inset 0px 0px 10px 2px rgba(0, 0, 0, 0.678);
+            right: 107%;
+            border-radius: 40%;
+        }
+        &::after{
+            content: '';
+            background-color: rgb(92, 92, 92);
+            position: absolute;
+            box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.699);
+            right: 111%;
+            height: 20px;
+            width: 20px;
+            top: 4px;
+            border-radius: 50%;
+            transition: all .4s ease;
+        }
+    }
+}
+#h1{
+    display: none;
+}
+#h1:checked~.header__label::after {
+    right: 135%;
+    background-color: rgb(161, 159, 159);
+}
+
+#menu__active{
+    display: none;
+    &:checked~.menu__list{
+        top: 100%;
+        opacity: 1;
+    }
+    &:checked~.menu__activator::after{
+        transform: rotate(45deg);
+        top: 50%;
+    }
+    &:checked~.menu__activator::before{
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+}
+.menu{
+    display: flex;
+    align-items: center;
+    &__activator{
+        width: 20px;
+        height: 20px;
+        &:hover{
+            cursor: pointer;
+        }
+        &::before{
+            content: '';
+            background-color: #fff;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            right: 15px;
+            top: 40%;
+            transition: all .3s ease;
+            display: none;
+            @media (max-width:768px){
+                display: block;
+            }
+        }
+        &::after{
+            content: '';
+            background-color: #fff;
+            width: 20px;
+            height: 2px;
+            position: absolute;
+            right: 15px;
+            top: 60%;
+            transition: all .3s ease;
+            display: none;
+            @media (max-width:768px){
+                display: block;
+            }
+        }
+    }
+    &__list{
+        display: flex;
+        align-items: center;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding: 0px;
+        @media (max-width:768px) {
+            opacity: 0;
+            top: -1000px;
+            transition: all .3s ease;
+            flex-direction: column;
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            background-color: rgba(78, 77, 77, 0.89);
+        }
+    }
+    &__item{
+        margin-right: 5px;
+        &:nth-last-of-type(1){
+            margin-right: 0px;
+        }
+        @media (max-width:768px){
+            width: 100%;
+            text-align: center;
+            margin: 0px;
+        }
+    }
+    &__link{
+        margin: 10px;
+        display: inline-block;
+        color: white;
+        position: relative;
+
+        @media (max-width:768px){
+            margin: 0px;
+            padding: 10px;
+            width: 100%;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            background-color: white;
+            width: 0px;
+            height: 2px;
+            bottom: -5px;
+            left: 50%;
+            transition: all .3s ease;
+            @media (max-width:768px){
+                bottom: 0px;
+                top: 0px;
+                background-color: rgba(197, 196, 196, 0.26);
+            }
+        }
+        &:hover:after{
+            left: 0px;
+            width: 100%;
+            @media (max-width:768px){
+                left: 0px;
+                right: 0px;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+        &:hover{
+            text-shadow: 0px 15px 10px rgb(255, 255, 255);
+            color: white;
+            text-decoration: none;
+        }
+    }
+}

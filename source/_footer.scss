@@ -1,0 +1,28 @@
+.footer{
+    position: relative;
+    background-color: gray;
+    height: 50px;
+    overflow: hidden;
+    i{
+        font-size: 30px;
+        right: -35px;
+        position: absolute;
+        color: rgb(32, 211, 243);
+        animation: move 4s infinite ease-in-out alternate;
+    }
+    &__inner{
+        text-align: center;
+        padding: 10px;
+        position: relative;
+        z-index: 0;
+    }
+    &__cover{
+        position: absolute;
+        top: 0px;
+        padding: 10px;
+        z-index: 1;
+        background-color: gray;
+        height: 100%;
+        animation: move3 4s infinite ease-in-out alternate;
+    }
+}
