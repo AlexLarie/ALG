@@ -574,7 +574,6 @@ h1, h2, h3, h4, h5, h6 {
 .services__gallery {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
 }
 @media (max-width: 1000px) {
   .services__gallery {
@@ -587,6 +586,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   letter-spacing: 1.3px;
   line-height: 2em;
+  margin-bottom: 20px;
 }
 .services__item {
   padding: 10px;
@@ -596,7 +596,7 @@ h1, h2, h3, h4, h5, h6 {
   animation: changeColor 5s alternate infinite;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   transition: all 0.3s ease;
 }
 .services__item:nth-of-type(3) {
@@ -639,6 +639,48 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 0px;
     margin-left: 0px;
   }
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.timer .item {
+  font-size: 20px;
+  position: relative;
+  width: 25%;
+  text-align: center;
+}
+.timer .item:nth-child(1)::after {
+  content: "дней";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timer .item:nth-child(2)::after {
+  content: "часов";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timer .item:nth-child(3)::after {
+  content: "минут";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.timer .item:nth-child(4)::after {
+  content: "секунд";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .contacts {

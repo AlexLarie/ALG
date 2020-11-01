@@ -179,7 +179,6 @@
     &__gallery{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
         @media (max-width:1000px){
             grid-template-columns: 100%;
         }
@@ -190,6 +189,7 @@
         font-size: 14px;
         letter-spacing: 1.3px;
         line-height: 2em;
+        margin-bottom: 20px;
     }
     &__item{
         padding: 10px;
@@ -199,7 +199,7 @@
         animation: changeColor 5s alternate infinite;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: flex-start;
         transition: all .3s ease;
         &:nth-of-type(3){
             margin-left: 10px;
@@ -239,6 +239,55 @@
                 margin-left: 0px;
             }
             margin-bottom: 10px;
+        }
+    }
+}
+.timer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    .item{
+        font-size: 20px;
+        position: relative;
+        width: 25%;
+        text-align: center;
+        &:nth-child(1){
+            &::after{
+                content: 'дней';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:nth-child(2){
+            &::after{
+                content: 'часов';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:nth-child(3){
+            &::after{
+                content: 'минут';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+        &:nth-child(4){
+            &::after{
+                content: 'секунд';
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 }

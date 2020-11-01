@@ -31,6 +31,10 @@ h1.onchange = () => {
             t1[i].style.color = 'black';
         }
         l1.innerHTML = 'Светлая тема';
+        let red = document.querySelectorAll('.text--red');
+        for (i=0;i<red.length;i++){
+            red[i].style.color = 'red';
+        }
         if(num==1) {
             for (i=0;i<menu.length;i++){
                 menu[i].style.backgroundColor = 'rgba(86, 120, 122)';
@@ -56,6 +60,10 @@ h1.onchange = () => {
                 continue
             }
             t1[i].style.color = 'white';
+        }
+        let red = document.querySelectorAll('.text--red');
+        for (i=0;i<red.length;i++){
+            red[i].style.color = 'red';
         }
         l1.innerHTML = 'Тёмная тема';
         header.style.backgroundColor = 'rgba(156, 156, 156';
