@@ -85,7 +85,7 @@ function go () {
 };
 let formClose = document.getElementById ('form__ok');
 formClose.onclick = () => {
-    document.getElementById ('form__ok').style.top = '10000px'
+    document.getElementById ('form__ok').style.top = '1000px'
 };
 function clear () {
     document.getElementById ('name').value = '';

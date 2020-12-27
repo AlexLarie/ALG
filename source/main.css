@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   display: none;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__activator::before {
     display: block;
   }
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   display: none;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__activator::after {
     display: block;
   }
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   padding: 0px;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__list {
     opacity: 0;
     top: -1000px;
@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu__item:nth-last-of-type(1) {
   margin-right: 0px;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__item {
     width: 100%;
     text-align: center;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   position: relative;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__link {
     margin: 0px;
     padding: 10px;
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transition: all 0.3s ease;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__link::after {
     bottom: 0px;
     top: 0px;
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0px;
   width: 100%;
 }
-@media (max-width: 940px) {
+@media (max-width: 768px) {
   .menu__link:hover:after {
     left: 0px;
     right: 0px;

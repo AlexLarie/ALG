@@ -9,7 +9,6 @@ formClose.onclick = () => {
 
 let first = document.querySelectorAll('.first');
 let h = [];
-
 //Добавляем прослушивание клика у элементов с классом .first
 for (i=0; i<first.length; i++){
     h[i] = first[i];
