@@ -233,7 +233,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__activator::before {
     display: block;
   }
@@ -249,7 +249,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
   display: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__activator::after {
     display: block;
   }
@@ -261,7 +261,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
   padding: 0px;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__list {
     opacity: 0;
     top: -1000px;
@@ -279,7 +279,7 @@ h1, h2, h3, h4, h5, h6 {
 .menu__item:nth-last-of-type(1) {
   margin-right: 0px;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__item {
     width: 100%;
     text-align: center;
@@ -292,7 +292,7 @@ h1, h2, h3, h4, h5, h6 {
   color: white;
   position: relative;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__link {
     margin: 0px;
     padding: 10px;
@@ -309,7 +309,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transition: all 0.3s ease;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__link::after {
     bottom: 0px;
     top: 0px;
@@ -320,7 +320,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 0px;
   width: 100%;
 }
-@media (max-width: 768px) {
+@media (max-width: 940px) {
   .menu__link:hover:after {
     left: 0px;
     right: 0px;
@@ -641,6 +641,13 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.text--red {
+  color: red !important;
+  display: block;
+  text-align: center;
+  font-weight: 400;
+}
+
 .timer {
   display: flex;
   align-items: center;
@@ -650,9 +657,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 .timer .item {
   font-size: 20px;
+  font-weight: 700;
   position: relative;
   width: 25%;
   text-align: center;
+}
+.timer .item::before {
+  content: ":";
+  position: absolute;
+  right: 0px;
 }
 .timer .item:nth-child(1)::after {
   content: "дней";
@@ -681,6 +694,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
+}
+.timer .item:nth-child(4)::before {
+  content: "";
 }
 
 .contacts {

@@ -242,6 +242,12 @@
         }
     }
 }
+.text--red{
+    color: red !important;
+    display: block;
+    text-align: center;
+    font-weight: 400;
+}
 .timer{
     display: flex;
     align-items: center;
@@ -250,9 +256,15 @@
     margin-top: 30px;
     .item{
         font-size: 20px;
+        font-weight: 700;
         position: relative;
         width: 25%;
         text-align: center;
+        &::before{
+            content: ':';
+            position: absolute;
+            right: 0px;
+        }
         &:nth-child(1){
             &::after{
                 content: 'дней';
@@ -287,6 +299,9 @@
                 top: 100%;
                 left: 50%;
                 transform: translateX(-50%);
+            }
+            &::before{
+                content: '';
             }
         }
     }
